@@ -1,0 +1,22 @@
+<div class="div-card" *ngIf="imageInput">
+  <mat-card fxLayout fxLayoutGap="20px">
+    <span fxFlex="1 1 70%">
+    <mat-card-header>
+
+    </mat-card-header>
+
+    <mat-card-content>
+      <mat-card-title>{{imageInput.title}}</mat-card-title>
+      <button mat-raised-button class="bookButton" color="primary" (click)="onBookTicket()">Jegyet foglalok!</button>
+      <img class="playImage" [src]="loadedImage"/>
+      <div class="playDatas">{{imageInput.genre | genreFormat}}</div>
+      <div class="playDatas">{{imageInput.date | playdateFormat}}</div>
+      <div class="description">{{imageInput.description}}</div>
+    </mat-card-content>
+    </span>
+  </mat-card>
+
+
+
+
+</div>

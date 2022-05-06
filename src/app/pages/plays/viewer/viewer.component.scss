@@ -1,0 +1,42 @@
+/*.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}*/
+
+.playImage {
+  width: 25%;
+  height: auto;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.div-card{
+  padding: 50px;
+}
+
+.playDatas{
+  margin-left: 9%;
+}
+
+mat-card-title{
+  margin-left: 2.5%;
+}
+
+.description{
+  margin-top: 15px;
+  margin-left: 5px;
+  font-size: 1.2em;
+  margin-right: 450px;
+}
+
+.bookButton{
+  font-size: 1.5em;
+  float: right;
+  margin-top: 15%;
+  margin-right: 40%;
+}

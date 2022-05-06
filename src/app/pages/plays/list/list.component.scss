@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.playImage {
+  width: 25%;
+  height: auto;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.select-row-even {
+  background-color: darkcyan;
+}
+
+.select-row-odd {
+  background-color: cyan;
+}
+
+.imageList{
+  padding: 5px;
+}

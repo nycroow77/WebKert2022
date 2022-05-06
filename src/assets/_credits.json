@@ -1,0 +1,36 @@
+[
+  {
+    "id" : "dzsungelkonyvecover",
+    "title": "A Dzsungel Könyve",
+    "genre" : "Kaland",
+    "date" : "16:10"
+  },
+
+  {
+    "id" : "hamletcover",
+    "title": "Hamlet",
+    "genre" : "Tragédia, Dráma",
+    "date" : "18:20"
+  },
+
+  {
+    "id" : "hpcover",
+    "title": "Harry Potter És Az Elátkozott Gyermek",
+    "genre" : "Kaland",
+    "date" : "20:00"
+  },
+
+  {
+    "id" : "kincsemcover",
+    "title": "Kincsem",
+    "genre" : "Romantikus, Kaland",
+    "date" : "15:45"
+  },
+
+  {
+    "id": "romeojulietcover",
+    "title": "Romeó és Júlia",
+    "genre" : "Kaland, Romantikus",
+    "date" : "17:30"
+  }
+]

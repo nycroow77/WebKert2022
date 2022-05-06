@@ -1,0 +1,18 @@
+<!--<div>
+  <select (change)="reload()" [(ngModel)]="chosenImage">
+&lt;!&ndash;    <option *ngFor="let obj of playObjectInput let i = index" [ngValue]="obj"
+            [ngClass]="i % 2 === 0 ? 'select-row-even' : 'select-row-odd'">{{obj.id}}</option>    &ndash;&gt;
+    <option *ngFor="let obj of playObjectInput let i = index" [ngValue]="obj"
+            [ngStyle]=" {'background-color' : i % 2 === 0 ? 'darkcyan' : 'cyan'}">{{obj.id}}</option>
+  </select>
+</div>-->
+
+<div class="imageList">
+   <mat-form-field appearance="fill">
+     <mat-select (selectionChange)="reload()" [(ngModel)]="chosenImage">
+       <mat-option *ngFor="let obj of playObjectInput let i = index" [value]="obj"
+               [ngStyle]=" {'background-color' : i % 2 === 0 ? 'lightcoral' : 'indianred'}">{{obj.id}}</mat-option>
+     </mat-select>
+
+   </mat-form-field>
+</div>

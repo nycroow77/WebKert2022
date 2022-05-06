@@ -1,0 +1,21 @@
+<div class="main_component">
+  <div class="listing">
+    <h2>Válaszd ki az előadást:</h2>
+    <app-list [playObjectInput]="playObject" (imageObjectEmitter)="loadImage($event)"></app-list>
+  </div>
+  <app-viewer class="div-flex" [imageInput]="chosenImage"></app-viewer>
+</div>
+<!--<div>
+    <select  (change)="reload()" [(ngModel)]="chosenImage">
+      <option *ngFor="let obj of playObject" [ngValue]="obj">{{obj.id}}</option>
+    </select>
+
+    <div class="container" *ngIf="chosenImage">
+        <img class="playImage" [src]="'assets/' + chosenImage.id + '.jpg'" />
+        <div class="break"></div>
+        <div>{{chosenImage.genre}}</div>
+        <div class="break"></div>
+        <div>{{chosenImage.date}}</div>
+    </div>
+
+</div>-->

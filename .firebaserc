@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angulartheaterapp": {
+      "hosting": {
+        "Theater": [
+          "angulartheaterapp"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angulartheaterapp"
+  }
+}
