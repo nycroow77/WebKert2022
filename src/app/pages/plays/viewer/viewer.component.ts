@@ -26,11 +26,7 @@ export class ViewerComponent implements OnInit, OnChanges {
 
         this.loadedImage = data;
 
-        /*let reader = new FileReader();
-        reader.readAsDataURL(data);
-        reader.onloadend = () => {
-          this.loadedImage = reader.result as string;
-        }*/
+
       });
     }
   }
@@ -39,7 +35,6 @@ export class ViewerComponent implements OnInit, OnChanges {
     const user = JSON.parse(localStorage.getItem('user') as string) as firebase.default.User;
     this.userService.getById(user.uid).subscribe(data=>{
       this.user = data;
-      //bebirom igy állítani (itt kommentformban allitotta volna be a user nevet auttomatan)
     });
   }
 

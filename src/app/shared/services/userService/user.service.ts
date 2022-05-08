@@ -25,7 +25,6 @@ export class UserService {
 
     getById(id: string){
       return this.afs.collection<User>(this.collectionName).doc(id).valueChanges();
-      //ez tlehet where-rel is csak ugy tan tombot ad vissza
     }
 
     update(user: User){

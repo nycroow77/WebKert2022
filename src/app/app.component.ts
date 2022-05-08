@@ -15,13 +15,10 @@ export class AppComponent implements OnInit {
   routes: Array<string> = [];
   loggedInUser?: firebase.default.User | null;
 
-/*  router: Router;
-  constructor(router: Router) {
-    this.router = router;
-  }*/
+
 
   constructor(private router: Router, private authService: AuthService) {
-    //parameter adattagok
+
   }
 
   ngOnInit(){

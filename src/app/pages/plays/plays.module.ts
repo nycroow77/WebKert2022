@@ -11,7 +11,6 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatCardModule} from "@angular/material/card";
 import {FlexModule} from "@angular/flex-layout";
 import {MatButtonModule} from "@angular/material/button";
-import {AppModule} from "../../app.module";
 import {GenreFormatPipe} from "../../shared/pipes/genre-format.pipe";
 import {PlaydateFormatPipe} from "../../shared/pipes/playdate-format.pipe";
 

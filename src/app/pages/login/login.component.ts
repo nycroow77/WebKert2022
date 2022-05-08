@@ -24,58 +24,17 @@ export class LoginComponent implements OnInit, OnDestroy {
   dialogTitle?: string = "Sikertelen belépés!";
   dialogLine1?: string = "Téves e-mail vagy jelszó!";
 
-  constructor(private router: Router,  private loadingService: FakeLoadingService, private authService: AuthService,
-              public dialog: MatDialog) { }
+  constructor(private router: Router, private loadingService: FakeLoadingService, private authService: AuthService,
+              public dialog: MatDialog) {
+  }
 
   ngOnInit(): void {
   }
 
   async login() {
     this.loading = true;
-    //Promise
-/*    this.loadingService.loadingWithPromise(this.email.value, this.password.value).then((_: boolean) => {
-      console.log("this executed second");
-      this.router.navigateByUrl('/main');
-    }).catch(error => {
-      console.error('Incorrect email or password!');
-    }).finally(()=>{
-      console.log('this is executed finally');
-    });*/
 
-    // async-await
-/*    try {
-      //then
-    const _ = await this.loadingService.loadingWithPromise(this.email.value, this.password.value)
-      this.router.navigateByUrl('/main');
-    }catch(error) {
-      //catch
-      console.error('Incorrect email or password!');
-    }
-    //finally
-    console.log('this is executed finally');*/
-
-  //Observable
-    //memory leak
-
-/*    this.loadingObservation = this.loadingService.loadingWithObservable(this.email.value, this.password.value);
-    this.loadingSubscription = this.loadingObservation/!*.subscribe((data : boolean) => {
-      console.log(data);*!/
-      .subscribe(
-        {
-          next: (data: boolean) => {
-            this.router.navigateByUrl('/main');
-          }, error: (error) => {
-            console.error(error);
-            this.loading = false;
-          }, complete: () => {
-            console.log('finally');
-            this.loading = false;
-          }
-        }
-      );*/
-    /*});*/
-
-    this.authService.login(this.email.value, this.password.value).then((cred) =>{
+    this.authService.login(this.email.value, this.password.value).then((cred) => {
       console.log(cred);
       this.router.navigateByUrl('/main');
       this.loading = false;
@@ -88,11 +47,11 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.loadingSubscription?.unsubscribe();
   }
 
-  openDialog(): void{
+  openDialog(): void {
     const dialogRef = this.dialog.open(PopupdialogComponent, {
       width: '450px',
       data: {

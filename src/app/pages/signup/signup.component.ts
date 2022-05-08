@@ -29,6 +29,7 @@ export class SignupComponent implements OnInit {
   dialogLine1?: string = "Az emailnek legyen email formája!";
   dialogLine2?: string = "A jelszó álljon legalább 6 karakterből!";
   dialogLine3?: string = "A két jelszó legyen azonos!";
+  dialogLine4?: string = "Lehetséges, hogy regisztráltak már ilyen e-mail címmel!";
 
   constructor(private location: Location, private authService: AuthService, private userService: UserService,
               private router: Router, public dialog: MatDialog) { }
@@ -50,7 +51,6 @@ export class SignupComponent implements OnInit {
           lastname: this.signUpForm.get('name.lastname')?.value
         }
       };
-      //itt tortenik az adatbazisba szuras
       this.userService.create(user).then(_ =>{
         console.log('User added successfully.');
         this.router.navigateByUrl('/plays');
@@ -75,7 +75,8 @@ export class SignupComponent implements OnInit {
         title: this.dialogTitle,
         line1: this.dialogLine1,
         line2: this.dialogLine2,
-        line3: this.dialogLine3
+        line3: this.dialogLine3,
+        line4: this.dialogLine4
       },
     });
 
